@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
@@ -15,10 +14,10 @@
     Under the surface we all have stuff going on - this webapp I wrote shows just a fraction of the many states we can feel</p>
     <p style="color: red;">disclaimer: this is a student built website: with no affliation with RUOK.</p>
     <div id="mainarea">
-         <span>Today I am feeling: </span><input autofocus type="text" id="input_textbox" name="messageinput" onblur="changepage"/>
+         <span>Today I am feeling: </span><input autofocus type="text" id="input_textbox" name="messageinput" onblur="changepage(value)"/>
+         <button id="opencamera">Open Camera</button>
     </div>
     </section>
-        <script src="./js/script.js"></script>
+        <script src="../js/script.js"></script>
 </body>
 </html>
-

@@ -9,9 +9,9 @@
 //     localStorage.setItem("",);
 //  }
 
-function changepage(){
-    if(this.value.length > 1)
-{localStorage.setItem(this.name, this.value); 
+function changepage(value){
+    if(value.length > 1)
+{localStorage.setItem('message', value); 
     window.location.href='./camerapage.html'}
 else{alert('please enter value in textbox')}
 
