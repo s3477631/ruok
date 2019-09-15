@@ -36,6 +36,7 @@ section {
     justify-content: space-around;
 
 }
+
 /* video {
     100%;
 } */
@@ -51,9 +52,7 @@ section {
     right: 0;
 }
 
-.outer{
-    height: 100vh;
-}
+.outer{}
 
 /* 
 @keyframes hovering {

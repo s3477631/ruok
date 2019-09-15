@@ -188,14 +188,6 @@ ticking = true;
 }
 });
 
-let accelerometer = new Accelerometer({frequency: 60});
-
-accelerometer.addEventListener('reading', e => {
-  console.log("Acceleration along the X-axis " + accelerometer.x);
-  console.log("Acceleration along the Y-axis " + accelerometer.y);
-  console.log("Acceleration along the Z-axis " + accelerometer.z);
-});
-accelerometer.start();
 
 
 
@@ -223,5 +215,13 @@ accelerometer.start();
 // }
 
 window.addEventListener('devicemotion', function(event){
-  document.getElementById("outputting").innerText = event.acceleration.z
+  var motioned = event.acceleration.z
+  var imageobj = document.getElementsByTagName("img")
+   imageobj.style.zIndex = 0
+if (motioned > 1){
+  imageobj.style.zIndex+= 1
+}
+else{
+  imageobj.style.zIndex-=1
+}
 });
