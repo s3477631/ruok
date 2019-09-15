@@ -226,7 +226,7 @@ window.addEventListener('devicemotion', function(event){
   if(motionarray.length > 20){
     motionarray = []
   }
-
+  document.getElementById("mindata").innerText = motionarray[motionarray.length -2];
 
   document.getElementById("accelerometerdata").innerText = motionarray[motionarray.length -1];
     if (motioned > 1 && captures.length > 2){
