@@ -221,3 +221,7 @@ accelerometer.start();
 //   li.appendChild(info);
 // }
 // }
+
+window.addEventListener('devicemotion', function(event){
+  document.getElementById("outputting").innerText = event.acceleration.z
+});
