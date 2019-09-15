@@ -219,17 +219,16 @@ window.addEventListener('devicemotion', function(event){
   var motioned = event.acceleration.z
   var imageobj = document.getElementsByTagName("img")
   document.getElementById("outputofEvent").innerText = imageobj
-   if(phototaken = true){
+  
     if (motioned > 1 && captures.length > 2){
 
       imageobj.style.zIndex+= 1
       document.getElementById("zIndexout").innerText = imageobj.style.zIndex 
     }
-    else{
+    else if (captures.length > 2){
       imageobj.style.zIndex-=1
       document.getElementById("zIndexout").innerText = imageobj.style.zIndex
     }
     
-   }
 
 });
