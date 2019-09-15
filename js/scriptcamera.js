@@ -221,12 +221,15 @@ window.addEventListener('devicemotion', function(event){
    imageobj.style.zIndex = 0
    if(phototaken = true){
     if (motioned > 1 && captures.length > 2){
-      
+
       imageobj.style.zIndex+= 1
+      
     }
     else{
       imageobj.style.zIndex-=1
+      
     }
+    document.getElementById("zIndexout").innerText = imageobj.style.zIndex
    }
 
 });
