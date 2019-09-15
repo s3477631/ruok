@@ -90,9 +90,10 @@
 
 // }
 
-
+var phototaken = false;
  document.getElementById("photosnapped").addEventListener("click", function(){
    takePhotonow()
+   phototaken = true;
  })
 
 
@@ -218,10 +219,14 @@ window.addEventListener('devicemotion', function(event){
   var motioned = event.acceleration.z
   var imageobj = document.getElementsByTagName("img")
    imageobj.style.zIndex = 0
-if (motioned > 1){
-  imageobj.style.zIndex+= 1
-}
-else{
-  imageobj.style.zIndex-=1
-}
+   if(phototaken = true){
+    if (motioned > 1 && captures.length > 2){
+      
+      imageobj.style.zIndex+= 1
+    }
+    else{
+      imageobj.style.zIndex-=1
+    }
+   }
+
 });
