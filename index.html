@@ -15,9 +15,10 @@
     Under the surface we all have stuff going on - this webapp I wrote shows just a fraction of the many states we can feel</p>
     <p style="color: red;">disclaimer: this is a student built website: with no affliation with RUOK.</p>
     <div id="mainarea">
-         <span>Today I am feeling: </span><input autofocus type="text" id="input_textbox" name="messageinput" onblur="if(this.value.length > 1){localStorage.setItem(this.name, this.value); window.location.href='../camerapage.html'}else{alert('please enter value in textbox')}"/>
+         <span>Today I am feeling: </span><input autofocus type="text" id="input_textbox" name="messageinput" onblur="changepage"/>
     </div>
     </section>
         <script src="../js/script.js"></script>
 </body>
 </html>
+
