@@ -218,7 +218,7 @@ ticking = true;
 window.addEventListener('devicemotion', function(event){
   var motioned = event.acceleration.z
   var imageobj = document.getElementsByTagName("img")
-   imageobj.style.zIndex = 0
+  document.getElementById("outputofEvent").innerText = imageobj
    if(phototaken = true){
     if (motioned > 1 && captures.length > 2){
 
