@@ -223,13 +223,13 @@ window.addEventListener('devicemotion', function(event){
     if (motioned > 1 && captures.length > 2){
 
       imageobj.style.zIndex+= 1
-      
+      document.getElementById("zIndexout").innerText = imageobj.style.zIndex 
     }
     else{
       imageobj.style.zIndex-=1
-      
+      document.getElementById("zIndexout").innerText = imageobj.style.zIndex
     }
-    document.getElementById("zIndexout").innerText = imageobj.style.zIndex
+    
    }
 
 });
