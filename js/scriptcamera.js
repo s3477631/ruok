@@ -217,18 +217,11 @@ ticking = true;
 
 window.addEventListener('devicemotion', function(event){
   var motioned = event.acceleration.z
-  var motionarray = []
-  var ishigherthan40 = false
   var imageobj = document.getElementsByTagName("img")
   document.getElementById("outputofEvent").innerText = imageobj
-  motionarray.push(Math.round(motioned * 100))
-
-  if(motionarray.length > 20){
-    motionarray = []
-  }
-  document.getElementById("mindata").innerText = motionarray[motionarray.length -2];
-
-  document.getElementById("accelerometerdata").innerText = motionarray[motionarray.length -1];
+  var movement = Math.round(motioned * 1000);
+  
+  document.getElementById("accelerometerdata").innerText = movement;
     if (motioned > 1 && captures.length > 2){
       imageobj.style.zIndex+= 1
       document.getElementById("zIndexout").innerText = imageobj.style.zIndex 
