@@ -220,7 +220,16 @@ window.addEventListener('devicemotion', function(event){
   var imageobj = document.getElementsByTagName("img")
   document.getElementById("outputofEvent").innerText = imageobj
   var movement = Math.round(motioned * 1000);
-  
+
+  if(movement > 500 && movement < 1000){
+    document.getElementById("indicator").innerText = 'above 500';
+  }
+  else if (movement > 1000 && movement < 2000){
+    document.getElementById("indicator").innerText = 'between 1000 and 2000'
+  }
+  else if (movement > 2000 && movement < 3000){
+    document.getElementById("indicator").innerText = 'between 2000 and 3000'
+  }
   document.getElementById("accelerometerdata").innerText = movement;
     if (motioned > 1 && captures.length > 2){
       imageobj.style.zIndex+= 1
