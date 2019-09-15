@@ -220,8 +220,8 @@ window.addEventListener('devicemotion', function(event){
   var imageobj = document.getElementsByTagName("img")
   document.getElementById("outputofEvent").innerText = imageobj
   
+  document.getElementById("accelerometerdata").innerText = motioned;
     if (motioned > 1 && captures.length > 2){
-
       imageobj.style.zIndex+= 1
       document.getElementById("zIndexout").innerText = imageobj.style.zIndex 
     }
