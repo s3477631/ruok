@@ -226,7 +226,7 @@ window.addEventListener('devicemotion', function(event){
   if(motionarray.length > 20){
     motionarray = []
   }
-if((motionarray[motionarray.length - 1] - motionarray[motionarray.length - 2]) > 40){
+if((motionarray[motionarray.length - 1] - motionarray[motionarray.length - 2]) < 40){
   ishigherthan40 = true;
 }
 
