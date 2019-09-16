@@ -222,23 +222,23 @@ window.addEventListener('devicemotion', function(event){
   var movement = Math.round(motioned * 1000);
 
   if(movement > -3000 && movement < -2000){
-    document.getElementById("indicator").innerText = 'between negative -3000 and -2000';
+    document.getElementById("indicator").innerText = 'back';
   }
   if(movement > -1000 && movement < 0){
-    document.getElementById("indicator").innerText = 'between negative -1000 and 0';
+    document.getElementById("indicator").innerText = '';
   }
   if(movement > 0 && movement < 500){
-    document.getElementById("indicator").innerText = 'between 0 and 500';
+    document.getElementById("indicator").innerText = '';
   }
 
   if(movement > 500 && movement < 1000){
-    document.getElementById("indicator").innerText = 'between 500 & 1000';
+    document.getElementById("indicator").innerText = '';
   }
   else if (movement > 1000 && movement < 2000){
-    document.getElementById("indicator").innerText = 'between 1000 and 2000'
+    document.getElementById("indicator").innerText = ''
   }
   else if (movement > 2000 && movement < 3000){
-    document.getElementById("indicator").innerText = 'between 2000 and 3000'
+    document.getElementById("indicator").innerText = 'forward'
   }
   document.getElementById("accelerometerdata").innerText = movement;
     if (motioned > 1 && captures.length > 2){
