@@ -221,6 +221,16 @@ window.addEventListener('devicemotion', function(event){
   document.getElementById("outputofEvent").innerText = imageobj
   var movement = Math.round(motioned * 1000);
 
+  if(movement > -3000 && movement < -2000){
+    document.getElementById("indicator").innerText = 'above 500';
+  }
+  if(movement > -1000 && movement < 0){
+    document.getElementById("indicator").innerText = 'above 500';
+  }
+  if(movement > 0 && movement < 500){
+    document.getElementById("indicator").innerText = 'above 500';
+  }
+
   if(movement > 500 && movement < 1000){
     document.getElementById("indicator").innerText = 'above 500';
   }
