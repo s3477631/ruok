@@ -223,39 +223,12 @@ window.addEventListener('devicemotion', function(event){
 
   if(movement > 3000){
     document.getElementById("indicator").innerText = 'back';
+
+
   }
   else if (movement < -3000){
     document.getElementById("indicator").innerText = 'forward'
   }
 
-  // if(movement > -3000 && movement < -2000){
-  //   document.getElementById("indicator").innerText = 'back';
-  // }
-  // if(movement > -1000 && movement < 0){
-  //   document.getElementById("indicator").innerText = '';
-  // }
-  // if(movement > 0 && movement < 500){
-  //   document.getElementById("indicator").innerText = '';
-  // }
-
-  // if(movement > 500 && movement < 1000){
-  //   document.getElementById("indicator").innerText = '';
-  // }
-  // else if (movement > 1000 && movement < 2000){
-  //   document.getElementById("indicator").innerText = ''
-  // }
-  // else if (movement > 2000 && movement < 3000){
-  //   document.getElementById("indicator").innerText = 'forward'
-  // }
-  document.getElementById("accelerometerdata").innerText = movement;
-    if (motioned > 1 && captures.length > 2){
-      imageobj.style.zIndex+= 1
-      document.getElementById("zIndexout").innerText = imageobj.style.zIndex 
-    }
-    else if (captures.length > 2){
-      imageobj.style.zIndex-=1
-      document.getElementById("zIndexout").innerText = imageobj.style.zIndex
-    }
-    
 
 });
